@@ -4,4 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Generate 2 components: Warning and Success, with correspondent messages and colors.
 
-####Focus on creating and nesting components
+### Focus on
+creating and nesting components
