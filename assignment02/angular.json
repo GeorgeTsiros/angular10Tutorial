@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "assignment2": {
+    "angularTutorial": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/assignment2",
+            "outputPath": "dist/angularTutorial",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "assignment2:build"
+            "browserTarget": "angularTutorial:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "assignment2:build:production"
+              "browserTarget": "angularTutorial:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "assignment2:build"
+            "browserTarget": "angularTutorial:build"
           }
         },
         "test": {
@@ -110,19 +111,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "assignment2:serve"
+            "devServerTarget": "angularTutorial:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "assignment2:serve:production"
+              "devServerTarget": "angularTutorial:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "assignment2",
+  "defaultProject": "angularTutorial",
   "cli": {
-    "analytics": false
+    "analytics": "602e7bbd-9e66-4e62-a69f-b381383d0103"
   }
 }

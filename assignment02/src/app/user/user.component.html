@@ -1,1 +1,12 @@
-<p>user works!</p>
+<label>User Name</label>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<br>
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="onCreateUser()">
+    Add new user.</button>
+<br><br>
+{{userName}}
+<br><br>
+<button class="btn btn-warning" [disabled]="userName === ''" (click)="onResetUser()">
+    Reset user name.</button>
+<br><br>
+<p>{{newUserStatus}}</p>
