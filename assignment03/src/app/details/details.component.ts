@@ -9,10 +9,14 @@ export class DetailsComponent implements OnInit {
 
   constructor() { }
   buttonClicked = 1;
+  clicksArray = [];
+  clicks = 0;
   ngOnInit(): void {
   }
 
   onShowDetails(){
+    this.clicks++;
+    this.clicksArray.push(this.clicks);
     if (this.buttonClicked === 1) {
       this.buttonClicked = 0;
     }
