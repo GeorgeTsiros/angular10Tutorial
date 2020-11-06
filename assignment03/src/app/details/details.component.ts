@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   constructor() { }
-
+  buttonClicked = 1;
   ngOnInit(): void {
   }
 
+  onShowDetails(){
+    if (this.buttonClicked === 1) {
+      this.buttonClicked = 0;
+    }
+    else{
+      this.buttonClicked = 1;
+    }
+  }
 }
