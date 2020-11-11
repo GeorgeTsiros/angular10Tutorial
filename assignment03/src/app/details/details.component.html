@@ -1,7 +1,7 @@
 <br> <br>
-<button class="btn btn-primary" (click)="onShowDetails()" >
+<button class="btn btn-primary" (click)="onShowDetails()">
     Details.</button>
 <hr>
-<!-- {{buttonClicked}} -->
-<p *ngIf  = "buttonClicked === 1">Those are the details that only the chosen ones might see. Or those that can click a button I guess</p>
-{{clicks}}
+<p *ngIf="buttonClicked === false">Those are the details that only the chosen ones might see. Or those that can click a
+    button I guess</p>
+<div *ngFor="let clicksNumber of clicksArray" > {{clicksNumber}}  </div>

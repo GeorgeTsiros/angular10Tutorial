@@ -8,20 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   constructor() { }
-  buttonClicked = 1;
+  buttonClicked = true;
   clicksArray = [];
-  clicks = 0;
   ngOnInit(): void {
   }
 
-  onShowDetails(){
-    this.clicks++;
-    this.clicksArray.push(this.clicks);
-    if (this.buttonClicked === 1) {
-      this.buttonClicked = 0;
-    }
-    else{
-      this.buttonClicked = 1;
-    }
+  onShowDetails() {
+    this.clicksArray.push(this.clicksArray.length + 1);
+    this.buttonClicked = !this.buttonClicked;
   }
 }
