@@ -4,4 +4,7 @@
 <hr>
 <p *ngIf="buttonClicked === false">Those are the details that only the chosen ones might see. Or those that can click a
     button I guess</p>
-<div *ngFor="let clicksNumber of clicksArray" > {{clicksNumber}}  </div>
+<div *ngFor="let clicksNumber of clicksArray" 
+[ngStyle] = "{backgroundColor: clicksNumber > 5 ? 'orange' : 'yellow'}"
+
+> {{clicksNumber}}  </div>
